@@ -3,6 +3,7 @@ import Navbar from '@/layouts/bank/components/Navbar';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import Dashboard from '@/layouts/bank/pages/dashboard/Dashboard';
 import Accounts from '@/layouts/bank/pages/accounts/Accounts';
+import Loan from '@/layouts/bank/pages/loan/Loan';
 import { useSetModalContainer } from '@/state/modals';
 import { useBankVisibility, useSetBankVisibility } from '@/state/visibility';
 import { useNuiEvent } from '@/hooks/useNuiEvent';
@@ -52,6 +53,7 @@ const Bank: React.FC = () => {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/accounts" element={<Accounts />} />
+            <Route path="/loan" element={<Loan />} />
             <Route path="/accounts/manage-access/:accountId" element={<ManageAccess />} />
             <Route path="/accounts/logs/:accountId" element={<Logs />} />
             <Route path="/accounts/invoices/:accountId" element={<Invoices />} />

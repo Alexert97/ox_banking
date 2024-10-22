@@ -21,46 +21,45 @@ const loans: Loan[] = [
 
 const Loan: React.FC = () => {
   return (
-    <div className="loan-page">
-      <h1></h1>
-        <BaseCard title="Loan Management" icon={ScanText} className="flex-1">
-            <div className="flex h-full flex-col gap-2 loan " >
-                <LoanButton
-                label={locales.loan1}
-                icon={Wallet}
-                /*disabled={!hasPermission('withdraw', account.role)}
-                onClick={() =>
-                    modal.open({
-                    title: locales.withdraw,
-                    children: <DepositWithdrawModal account={account} />,
-                    })
-                }*/
-                />
-                <LoanButton
-                label={locales.loan2}
-                icon={Landmark}
-                /*disabled={!hasPermission('deposit', account.role)}
-                onClick={() =>
-                    modal.open({
-                    title: locales.deposit,
-                    //children: <DepositWithdrawModal account={account} isDeposit={true} />,
-                    })
-                }*/
-                />
-                <LoanButton
-                label={locales.loan3}
-                icon={Repeat}
-                /*disabled={!hasPermission('withdraw', account.role)}
-                onClick={() => modal.open({ title: locales.transfer, children: <TransferModal account={account} /> })}*/
-                />
-                <LoanButton
-                /*onClick={() => navigate(`/accounts/invoices/${account.id}`)}
-                //disabled={!hasPermission('manageAccount', account.role)}*/
-                label={locales.loan4}
-                icon={ReceiptText}
-                />
-            </div>
-        </BaseCard>
+    <div className="flex h-full w-full flex-col gap-2 p-2">
+      <BaseCard title="Loan Management" icon={ScanText} className="flex w-full">
+          <div className="flex h-full flex-col gap-2 w-full" >
+              <LoanButton
+              label={locales.loan1}
+              icon={Wallet}
+              /*disabled={!hasPermission('withdraw', account.role)}
+              onClick={() =>
+                  modal.open({
+                  title: locales.withdraw,
+                  children: <DepositWithdrawModal account={account} />,
+                  })
+              }*/
+              />
+              <LoanButton
+              label={locales.loan2}
+              icon={Landmark}
+              /*disabled={!hasPermission('deposit', account.role)}
+              onClick={() =>
+                  modal.open({
+                  title: locales.deposit,
+                  //children: <DepositWithdrawModal account={account} isDeposit={true} />,
+                  })
+              }*/
+              />
+              <LoanButton
+              label={locales.loan3}
+              icon={Repeat}
+              /*disabled={!hasPermission('withdraw', account.role)}
+              onClick={() => modal.open({ title: locales.transfer, children: <TransferModal account={account} /> })}*/
+              />
+              <LoanButton
+              /*onClick={() => navigate(`/accounts/invoices/${account.id}`)}
+              //disabled={!hasPermission('manageAccount', account.role)}*/
+              label={locales.loan4}
+              icon={ReceiptText}
+              />
+          </div>
+      </BaseCard>
     </div>
   );
 };
